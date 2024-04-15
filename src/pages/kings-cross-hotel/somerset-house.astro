@@ -1,0 +1,479 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero/Hero.astro";
+import DefaulContentBlock from "../../components/Content/DefaultContentBlock.astro";
+import ImageOnRight from "../../components/Content/ImageOnRight.astro";
+import ImageOnLeft from "../../components/Content/ImageOnLeft.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Button from "../../components/Buttons/PrimaryButton.astro";
+import SubTitle from "../../components/Headings/SubTitle.astro";
+import webDesign1 from "../../assets/images/web-design-img6.jpg";
+import heroBg from "../../assets/images/img1.jpg";
+import Megaro1 from "../../assets/images/diesel.jpg";
+import Magenta from "../../assets/images/magenta.png";
+import Hokus from "../../assets/images/hokus.webp";
+import Spagnoletti from "../../assets/images/spagnoletti1.jpg";
+import Rose from "../../assets/images/rose.jpg";
+import Diesel from "../../assets/images/diesel.jpg";
+import Deluxe from "../../assets/images/deluxe.jpg";
+import Groove from "../../assets/images/groove.jpg";
+import Diva from "../../assets/images/diva.jpg";
+import Classic from "../../assets/images/classic.jpg";
+import Backstage from "../../assets/images/backstage.jpg";
+
+import Reception from "../../assets/images/reception.png";
+import Bar from "../../assets/images/bar.jpg";
+import Pastry from "../../assets/images/pastry.jpg";
+import Coffee from "../../assets/images/coffee.jpg";
+import Lounge from "../../assets/images/lounge.jpg";
+import Terrace from "../../assets/images/terrace.jpg";
+import Location from "../../assets/images/location.jpg";
+import Matchbox from "../../assets/images/matchbox2.jpg";
+import cosyDouble from "../../assets/images/cosy-double1.jpg";
+import spaciousDouble from "../../assets/images/spacious-double2.jpg";
+import Twin from "../../assets/images/twin1.jpg";
+import Family from "../../assets/images/family2.jpg";
+import familyPlus from "../../assets/images/familyplus1.jpg";
+import Library from "../../assets/images/library.jpg";
+import oxfordSt from "../../assets/images/oxford-street.jpg";
+import Food from "../../assets/images/food1.jpg";
+
+import Gyle4 from "../../assets/images/gyle4.jpg";
+import Gyle2 from "../../assets/images/gyle2.jpg";
+import Gyle3 from "../../assets/images/gyle3.png";
+import Gyle5 from "../../assets/images/gyle5.jpg";
+import Toast1 from "../../assets/images/toast1.jpg";
+import Tc2023 from "../../assets/images/tc2023.png";
+import CtaBg1 from "../../assets/images/hero-bg2.png";
+import tinyKing from "../../assets/images/tiny-king.jpg";
+import largeKing from "../../assets/images/large-king.jpg";
+import kingBathroom from "../../assets/images/king-bathroom.jpg";
+import kingBalcony from "../../assets/images/king-balcony.jpg";
+import gyleSuite from "../../assets/images/gyle-suite.jpg";
+import citySuite from "../../assets/images/city-suites.jpg";
+import featureTwin from "../../assets/images/feature-twin.jpg";
+import museum from "../../assets/images/museum1.jpg";
+import bookingOffice from "../../assets/images/booking-office.jpg";
+import HeroDecorator from "../../components/Decoraters";
+import { Image } from 'astro:assets'
+const town = "Somerset House";
+
+---
+
+	<Layout title={`The Megaro | Kings Cross Hotel | Ideal for visiting Somerset House`} description={`The Megaro Hotel. Looking for Hotels in Kings Cross? Conveniently located for St Pancras & Kings Cross stations. Ideal for visiting Somerset House`}>
+
+  
+
+<Hero
+  title="Kings Cross Hotel near Somerset House"
+  sub="A Unique Hotel Experience" 
+  extraSub="The Megaro"
+  linkText="BOOK NOW"
+  href="https://www.themegaro.co.uk/"
+  image={heroBg}
+  
+  >
+  <div slot="heroContent"> 
+    <p class="my-6 lg:text-lg">
+        The Megaro is ideally located in the heart of King's Cross, London. Our hotel is just a stone's throw away from London Kings Cross station, making it the perfect base for exploring the city.         </p>
+    
+  </div>  
+</Hero>
+		
+    
+
+    <!-- TWO COLUMN CONTENT BLOCK WITH IMAGE ON RIGHT. NOTE THAT HEIGHT / WIDTH CAN BE APPLIED IF REQUIRED, FOR EXAMPLE - IF TEXT CONTENT IS LONG OR SHORT, YOU MAY WANT TO SET THE IMAGE HEIGHT TO LINE IMAGE UP WITH TEXT CONTENT -->    
+	<ImageOnRight
+    
+    title="Our Hotel in the Heart of Kings Cross"
+    image={Megaro1} 
+    imageAlt="Our  Kings Cross hotel - a great alternative to Premier Inn"
+    titleColor="black"
+    height={500} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Welcome to The Megaro hotel,  London Kings Cross.      </p>
+      <p>
+        We offer an unrivaled location just a stone's throw from Kings Cross St Pancras rail station, one of the most accessible stations on the London underground. Perfect if you're travelling into London to visit Somerset House.     </p>
+     <p>
+        Behind our multicoloured, mural splattered façade, we’re rewriting the entire rulebook. Always striving to deliver an uncompromised excellence in service, our flagship hotel whole-heartedly embraces the changing face of London and combines all the things that make life fun.
+    <p>
+        Nestled in one of London's most vibrant neighborhoods - Kings Cross - our hotel's location is second to none. Kings Cross station, a major transportation hub connecting you to every corner of the city, is just steps away, making your travels effortless. We are also in a convenient location for Covent Garden, Granary Square and the Dominion Theatre.     </p>
+     
+    </Fragment>
+  </ImageOnRight>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+
+
+
+<!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6">
+  <SubTitle>Hotel Features</SubTitle>
+  <div class="mb-10 mt-4 mx-auto px-4 md:text-lg">
+
+    <ImageOnRight
+    
+    title="Magenta Restaurant"
+    image={Magenta} 
+    imageAlt="Our Hotel in the Heart of Kings Cross - a great alternative to Premier Inn"
+    titleColor="black"
+    height={250} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Venture down to Magenta and join us for lunch, afternoon aperitivo, or an unforgettable evening under the butterfly canopy. You’ll be greeted with a Michelin endorsed fine dining experience indulging in our sense-grabbing menu of sublimely crafted Italian food, reimagined with seasonal British ingredients. Accompanying the food is a sommelier-crafted and predominantly Italian wine list that celebrates regional diversity for your tasting pleasure.
+
+      </p>
+     
+    </Fragment>
+  </ImageOnRight>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+  <ImageOnLeft
+    
+    title="Spagnoletti"
+    image={Spagnoletti} 
+    imageAlt="Our Hotel in the Heart of Kings Cross - a great alternative to Premier Inn"
+    titleColor="black"
+    height={300} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        We’ll see you here each morning where you can tuck into all manner of fresh pastries, hot drinks, full English or Italian breakfasts to refuel you for the day. Our whimsically retro-futuristic restaurant is centred around an ethos of one simple ingredient: flour. Come back for lunch or dinner to sample honest Italian food with a contemporary edge, from colourful fresh pasta to grilled dishes and sweet desserts, all at affordable prices and prepared live from the open kitchen.
+
+
+      </p>
+     
+    </Fragment>
+  </ImageOnLeft>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+  <ImageOnRight
+    
+    title="Hokus Pokus"
+    image={Hokus} 
+    imageAlt="A great night's sleep in a double bed at our Hotel in the Heart of Kings Cross - a great alternative to Premier Inn"
+    titleColor="black"
+    height={250} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        
+Looking for adventure? You’ll find late-night bar Hokus Pokus underground, with a hazy interior that mixes futuristic steampunk with a Victorian era apothecary. Let us surprise you with our extraordinary cocktails, botanical concoctions, and magical libations all made and brewed in-house, and served with an eccentric, scientific flair guaranteed to put you under a spell.
+      </p>
+     
+    </Fragment>
+  </ImageOnRight>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+
+    
+
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+
+
+
+
+<CallToAction
+    background={Rose}  
+    title="Start Your London Journey Here"
+    ImageAlt="Start Your London Journey Here"
+    linkText="Book Now"
+    href="https://www.themegaro.co.uk/">
+    <div slot="ctaContent"> 
+      <p class="mt-6 mb-4 lg:text-lg">
+        The Megaro offers a truly unique London experience. Our great location and proximity to transport hubs and London's famous attractions means you have the city at your fingertips. Start planning your London adventure today and make your reservation at The Megaro now.       </p>
+    </div>
+  </CallToAction>
+
+
+
+ 
+
+   
+<!-- BEGIN THREE CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6">
+  <SubTitle>Our Rooms</SubTitle>
+  <p class="my-4 text-center md:text-lg">Our guest rooms and suites are designed to delight in deeply immersive mini-universes straight out of a theatric novel. With five different themes, you haven’t tried one until you've tried them all.
+    </p>
+   
+  <div
+  class="mt-6 grid w-full lg:gap-10 lg:grid-cols-2"
+  >
+  <div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-pink-800 text-white text-center">
+  <Image
+    src={Diva}
+    class="h-48 w-full object-cover"
+    alt="Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 border-t-2 border-white text-xl font-bold px-4">
+    POP DIVA SUITES
+  </h3>
+  <p class="px-4">
+    Dubbed 'Pop Diva Studios', each room has the compact and versatile layout of a backstage, movie artist studio with dedicated bar lounge, and dressing area in a glamourous palette of vibrant reds and seductive gold. The spacious bathrooms are a pampering paradise in the glow of Hollywood mirrors, the perfect place for a champagne bubble bath.</p>
+  
+      <a href="https://www.themegaro.co.uk/pop-diva-suites"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+  </div>
+  
+  
+  <div class="flex flex-col overflow-hidden rounded-lg lg mb-10 pb-4 bg-pink-800 text-white text-center">
+  <Image
+    src={Diesel}
+    class="h-48 w-full object-cover"
+    alt="Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 text-xl font-bold px-4 border-t-2 border-white">
+    DIESEL CORNER STUDIO
+  </h3>
+  <p class="px-4">
+    The interiors are quirky artistic compositions printed on metal sheets and soft cushions, using local cultural icons from the British bulldog to Harry Potter's owl, revisited with humour. A dash of rock and roll, this room comes with carpets evoking burnt rubber on asphalt and shimmering, petrol coloured walls.
+  </p>
+  
+      <a href="https://www.themegaro.co.uk/diesel-corner-studio"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+  </div>
+  
+  
+  
+  </div>
+  </div>
+  
+  <!-- END THREE CARDS WITH IMAGE AND NO BORDER SECTION -->
+
+  <!-- BEGIN THREE CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+  <div class="mx-auto max-w-7xl px-6">
+  
+  <div
+  class="mt-6 grid w-full lg:gap-10 lg:grid-cols-3"
+  >
+
+  <div class="flex flex-col overflow-hidden rounded-lg lg mb-4 md:mb-10 border text-white text-center pb-4 bg-pink-800">
+    <Image
+      src={Rose}
+      class="h-48 w-full object-cover"
+      alt="Kings Cross hotel"
+      format="webp"
+    />
+    <h3 class="py-4 border-t-2 border-white text-xl font-bold px-4">
+      BRITANNIA ROSE
+    </h3>
+    <p class="px-4">
+      For the finer things in life, enjoy Britannia Rose's wine-themed interior. Each room has a warm, dramatic design scheme in five shades of red and pink inspired by classic red grape varieties: Cabernet, Merlot, Pinot Noir, Sangiovese and Tempranillo. Don't miss the 'in vino veritas' custom wallpaper.    </p>
+  
+      <a href="https://www.themegaro.co.uk/britannia-rose"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+    </div>
+
+
+  <div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-pink-800 text-white text-center">
+  <Image
+    src={Groove}
+    class="h-48 w-full object-cover"
+    alt="Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 border-t-2 border-white text-xl font-bold px-4">
+    GROOVE BRITANNIA</h3>
+  <p class="px-4 mb-6">
+    Spend a night in this music inspired space, where dancing in your room is heavily encouraged. You'll find individually designed beds, mobile wardrobes, and rippling silver surfaces inspired by the first Apollo space programme, British glam rock, and disco balls.  </p>
+  
+      <a href="https://www.themegaro.co.uk/groove-britannia"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+  </div>
+  
+  
+  <div class="flex flex-col overflow-hidden rounded-lg lg mb-10 pb-4 bg-pink-800 text-white text-center">
+  <Image
+    src={Backstage}
+    class="h-48 w-full object-cover"
+    alt="Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 text-xl font-bold px-4 border-t-2 border-white">
+    BACKSTAGE BRITANNIA
+  </h3>
+  <p class="px-4">
+    Adorned with flight-case furniture straight off of a movie set that has just been unloaded from the trailer or private jet of a DJ or band on a world tour. This room has a rebellious punk rock edge inspired by the acid house scene of nearby Camden and King's Cross's past.  </p>
+  
+      <a href="https://www.themegaro.co.uk/backstage-britannia"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+  </div>
+</div>
+<div
+  class="mt-6 grid w-full lg:gap-10 lg:grid-cols-2"
+  >
+  <div class="flex flex-col overflow-hidden rounded-lg lg mb-4 md:mb-10 border text-white text-center pb-4 bg-pink-800">
+    <Image
+      src={Classic}
+      class="h-48 w-full object-cover"
+      alt="Speedy free Wi Fi available"
+      format="webp"
+    />
+    <h3 class="py-4 border-t-2 border-white text-xl font-bold px-4">
+      CLASSIC SUITES
+    </h3>
+    <p class="px-4">
+      
+If you're a no frills type looking for classic double rooms or family rooms, opt for a Double Deluxe or Junior Suite. The antithesis of our Design Rooms, these come with neutral tones and comfortable interiors for soothing relaxation and a famous good night's sleep.
+    </p>
+  
+      <a href="https://www.themegaro.co.uk/classic-junior-suites"
+   class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+    </div>
+
+    <div class="flex flex-col overflow-hidden rounded-lg lg mb-4 md:mb-10 border text-white text-center pb-4 bg-pink-800">
+      <Image
+        src={Deluxe}
+        class="h-48 w-full object-cover"
+        alt="Speedy free Wi Fi available"
+        format="webp"
+      />
+      <h3 class="py-4 border-t-2 border-white text-xl font-bold px-4">
+        CLASSIC DOUBLE & DELUXE
+      </h3>
+      <p class="px-4">
+        
+        If you're a no frills type, opt for a Double Deluxe or Junior Suite. The antithesis of our Design Rooms, these come with neutral tones and comfortable interiors for soothing relaxation and a famous good night's sleep.
+      </p>
+    
+        <a href="https://www.themegaro.co.uk/classic-double-suites"
+     class="bg-gray-700 hover:bg-gray-300 block border border-white rounded-lg text-white text-center max-w-2xl mx-auto px-6 py-2 mb-4 mt-6 text-lg uppercase font-bold">Book Now</a>
+      </div>
+  
+  </div>
+  </div>
+ 
+</div>
+</div>
+  <!-- END THREE CARDS WITH IMAGE AND NO BORDER SECTION -->
+
+
+    
+
+   <!-- TWO COLUMN CONTENT BLOCK WITH IMAGE ON RIGHT. NOTE THAT HEIGHT / WIDTH CAN BE APPLIED IF REQUIRED, FOR EXAMPLE - IF TEXT CONTENT IS LONG OR SHORT, YOU MAY WANT TO SET THE IMAGE HEIGHT TO LINE IMAGE UP WITH TEXT CONTENT -->    
+	<ImageOnLeft
+    
+    title="Perfect Location for Easy Access"
+    image={Location} 
+    imageAlt="Perfect Location for Easy Access"
+    titleColor="black"
+    height={600}
+    width={600}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Our hotel's location in Kings Cross is nothing short of perfect, especially for guests traveling to Central London to visit Somerset House. Situated a shoirt walk from key transportation hubs, including King's Cross station St Pancras International Station, the Eurostar terminal, and Euston rail Station, we offer unbeatable convenience and accessibility as one of the best placed London hotels in Kings Cross.
+     </p>
+      <p>
+        Whether you're arriving by train, Eurostar, or need to hop on a connecting journey, The Megaro's  central location ensures that you are just moments away from your point of arrival after your journey from Somerset House. St Pancras International Station, known as one of London's primary train stations and the Eurostar gateway to mainland Europe, is a mere stone's throw away. This makes your journey to and from the continent or other parts of the UK incredibly seamless.
+      </p>
+     <p>
+      Euston, another major transportation hub, is within easy reach, further enhancing your connectivity within London and beyond. This strategic placement at the intersection of several key train stations means that you can explore Central London and its many attractions with the utmost ease.
+    </p>
+    
+     
+    </Fragment>
+  </ImageOnLeft>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+  <div class="mb-10 mt-4 lg:-mt-10 mx-auto px-4 lg:px-8 md:text-lg">
+    <p>
+      The Megaro's location, within walking distance of these critical transport links, not only saves you valuable time but also allows you to immerse yourself in the vibrant atmosphere of Kings Cross. As you step out of our hotel, you'll find yourself surrounded by a wealth of dining, shopping, and cultural experiences that define this dynamic neighbourhood.    </p>
+    <p>
+      In summary, if you are visiting London from Somerset House, our hotel's perfect location, within walking distance of St Pancras International Station, the Eurostar terminal, and Euston Station, ensures that you are ideally positioned to embark on your London adventure with ease and convenience. We look forward to welcoming you to The Megaro and making your journey to Central London truly exceptional.
+    </p>
+  </div>
+   <!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6">
+  <SubTitle>Discover London</SubTitle>
+  
+  <p class="my-4 text-center md:text-lg">The California's very good location in Kings Cross places you at the crossroads of some of London's most iconic attractions. Whether you're a history buff, a literature enthusiast, a shopping aficionado, or a food connoisseur, our neighborhood offers an array of experiences to suit your interests.
+  </p>
+<div
+class="mt-12 grid w-full lg:gap-10 lg:grid-cols-3"
+>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 border pb-4 bg-pink-800 text-white">
+  <Image
+    src={museum}
+    class="h-48 w-full object-cover"
+    alt="st pancras Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 text-white text-xl font-bold px-4 border-t-2 border-white text-center">
+    British Museum
+
+  </h3>
+  <p class="px-4  text-center mb-4">
+    Immerse yourself in the rich tapestry of history at the world-renowned British Museum. It's just a stone's throw away from The California, making it easy for you to explore its vast collection of artifacts, including the Rosetta Stone and the Elgin Marbles.
+  </p>
+
+ 
+
+</div>
+
+
+<div class="flex flex-col text-white text-center overflow-hidden rounded-lg bg-pink-800 mb-4 md:mb-10 pb-4">
+  <Image
+    src={Library}
+    class="h-48 w-full object-cover"
+    alt="st pancras Kings Cross hotel"
+    format="webp"
+  />
+  <h3 class="py-4 text-center border-t-2 border-white text-xl font-bold px-4">
+    British Library
+  </h3>
+  <p class="px-4 mb-4">
+    For literary enthusiasts, the British Library is a must-visit. Located nearby, it houses a treasure trove of books, manuscripts, and historical documents, including the Magna Carta and original Beatles lyrics.
+</p>
+
+</div>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 border pb-4 bg-pink-800 text-white">
+  <Image
+    src={oxfordSt}
+    class="h-48 w-full object-cover"
+    alt="st pancras Kings Cross hotel"
+  />
+  <h3 class="py-4 text-xl font-bold px-4 border-t-2 border-white text-center">
+    Oxford Street
+  </h3>
+  <p class="px-4  text-center mb-4">
+    If you're in the mood for shopping, Oxford Street, the premier shopping destination in London's west end, is within reach. The Dominion Theatre is also nearby should you wish to take in a show.</p>
+    
+</div>
+</div>
+</div>
+
+<!-- END THREE CARDS WITH IMAGE + BORDER SECTION -->
+
+
+<p class="mt-4 px-4 mb-10 text-center md:text-lg">Whether you're drawn to the cultural treasures of the British Museum, eager to shop, or looking to satisfy your taste buds at the restaurants nearby, The Megaro's central location puts you at the heart of it all. London's rich tapestry of experiences awaits, and we're here to ensure your stay is as memorable as the city itself.
+</p>
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+<CallToAction
+    background={Rose}  
+    title="Start Your London Journey Here"
+    ImageAlt="Start Your London Journey Here"
+    linkText="Book Now"
+    href="https://www.themegaro.co.uk/">
+    <div slot="ctaContent"> 
+      <p class="mt-6 mb-4 lg:text-lg">
+        The Megaro offers a truly unique London experience. Our great location and proximity to transport hubs and London's famous attractions means you have the city at your fingertips. Start planning your London adventure today and make your reservation at The Megaro now.       </p>
+    </div>
+  </CallToAction>
+
+
+</Layout>  
+

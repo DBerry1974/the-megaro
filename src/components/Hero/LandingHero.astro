@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets'
+import PrimaryButton from "../Buttons/PrimaryButton.astro";
+import Container from "../Layout/Container.astro";
+
+
+interface Props {
+  title: string;
+  sub?: string;
+  extraSub?: string;
+  copy?: string;
+  subCopy?: string;
+  image: string;
+  href?: string;
+  linkText?: string;
+}
+const { title, sub, extraSub, copy, subCopy, image, href, linkText } = Astro.props;
+---
+
+<div class="relative min-h-fit sm:min-h-0 overflow-hidden">
+  <div class="absolute inset-0">
+    <Image
+      class="h-full w-full object-cover"
+      src={image}
+      alt="Home coating solutions"
+      width={800}
+      aspectRatio={16 / 9}
+      fit="cover"
+      loading="eager"
+      format="webp"
+    />
+    <div
+      class="absolute inset-0 bg-black opacity-70"
+    >
+    </div> 
+  </div>
+  
+  <div class="container relative mx-auto lg:px-8">
+    <div class="w-full">
+      <div class="md:flex md:flex-1 items-center justify-between py-6">
+      
+
+      
+    <div class="mx-auto text-center sm:text-left pb-10 max-w-5xl">
+      <div class="pb-10 pt-2 md:py-6">
+        
+        {
+          extraSub ? (
+            <>
+              <h1 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-xl sm:text-2xl xl:text-2xl">
+                {title}
+              </h1>
+              <h2 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+                {sub}
+              </h2>
+              <h3 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-xl sm:text-2xl xl:text-2xl">{extraSub}</h3>
+            </>
+          ) :
+          sub ? (
+            <>
+              <h1 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-xl sm:text-2xl xl:text-2xl">
+                {title}
+              </h1>
+              <h2 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-4xl lg:text-8xl ease-in">
+                {sub}
+              </h2>
+            </>
+          ) : (
+            <h1 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+              {title}
+            </h1>
+          )
+        }
+
+<div class="mt-6">
+  <div class="mx-auto max-w-7xl md:text-lg md:leading-8 text-white">
+   
+    <slot name="heroContent" />
+  </div>
+
+        {
+          href && (
+            <a href={href} class="block sm:inline-flex items-center text-center uppercase no-underline bg-green-800 px-5 py-3 text-sm sm:text-lg tracking-wider font-bold hover:bg-gray-500 shadow-md text-white rounded-lg">
+              {linkText}
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

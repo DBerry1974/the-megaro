@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets'
+import  Button  from "./Buttons/PrimaryButton.astro"
+
+interface Props {
+  background?: string;
+  title?: string;
+  largeTitle?: string;
+  extraText?: string;
+  description?: string;
+  
+  spanTitle?: string;
+  titleSpan?: string; 
+  spanTitleNext?: string;
+  ImageAlt: string;
+}
+const {
+  background,
+  title,
+  largeTitle,
+  extraText,
+  description,
+  linkText,
+  href,
+  spanTitle,
+  titleSpan,
+  spanTitleNext,
+  ImageAlt
+} = Astro.props;
+---
+<div class="max-w-7xl mx-auto px-6 mb-10 mt-10 md:mt-0">
+
+<div class="relative overflow-hidden py-10  rounded-lg"
+>
+  <Image
+    class="absolute lg:w-screen top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+    src={background}
+    alt={ImageAlt}
+    width={1920}
+    height={1080}
+    format={"webp"}
+  />
+  <div class="absolute inset-0 bg-black opacity-70 "></div> 
+  <div class="relative">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2
+        class="font-bold text-2xl tracking-tight text-white md:text-5xl"
+      >
+        {title}
+      </h2>
+      <h2
+        class="font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+      >
+        {largeTitle}
+      </h2>
+      <h2
+        class="font-display inline font-extrabold text-2xl tracking-tight text-white md:text-6xl"
+      >
+      {spanTitle}</h2>
+      <span class="text-green-800 font-display inline font-extrabold text-2xl tracking-tight md:text-6xl">{titleSpan}</span>
+      <h2
+      class="font-display inline font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+    >
+      {spanTitleNext}</h2>
+
+      <!--<p class="mt-4 text-xl tracking-tight text-white">
+        {description}
+      </p>-->
+
+      <div class="mt-6">
+        <div class="mx-auto max-w-5xl md:text-lg md:leading-8 text-white">
+          <slot name="ctaContent" />
+        </div>
+
+    </div>
+    <div class="mx-auto max-w-5xl md:text-lg md:leading-8 text-white">
+      <slot name="extraText" />
+    </div>
+  </div>
+</div>
+</div>

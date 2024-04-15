@@ -1,0 +1,112 @@
+---
+import { Image } from 'astro:assets'
+import PrimaryButton from "../Buttons/PrimaryButton.astro";
+import Container from "../Layout/Container.astro";
+import Logo from "../../assets/logos/logo-megaro.svg";
+
+
+interface Props {
+  title: string;
+  sub?: string;
+  copy?: string;
+  subCopy?: string;
+  image: string;
+  href?: string;
+  linkText?: string; 
+}
+const { title, sub, copy, subCopy, image, href, linkText } = Astro.props;
+---
+
+<div class="relative min-h-fit sm:min-h-0 overflow-hidden">
+  <div class="absolute inset-0">
+    <Image
+      class="h-full w-full object-cover"
+      src={image}
+      alt="The Megaro Hotel"
+      width={800}
+      aspectRatio={16 / 9}
+      fit="cover"
+      loading="eager"
+      format="webp"
+    />
+    <div
+      class="absolute inset-0"
+      style="background-image: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))"
+    >
+    </div>
+  </div>
+  
+  <Container classes="relative">
+    <div class="w-full">
+      <div class="md:flex md:flex-1 items-center justify-between hidden py-6">
+      <div>
+      <a href="https://www.themegaro.co.uk/">
+      <img 
+      src={Logo.src}
+      width="100"
+      alt="Kings Cross Hotel"
+      class="ml-4"
+      />
+      </a>
+      </div>
+      
+      <a class="bg-pink-800 rounded-lg hover:bg-gray-900 px-8 py-4 text-white font-bold uppercase block mr-4 text-xl" href="https://www.themegaro.co.uk/">
+       Book Now
+      </a>
+      
+      
+      </div>
+      <div class="flex-1 items-center md:hidden pt-4">
+        <div>
+        <img 
+        src={Logo.src}
+        width="100"
+        alt="Kings Cross Hotel"
+        class="mx-auto"
+        />
+        </div>
+        
+        <a class="bg-pink-800 rounded-lg hover:bg-gray-900 px-1 py-2 text-white uppercase text-center my-4 block mx-auto w-1/2 font-bold text-lg" href="https://www.themegaro.co.uk/">
+          Book Now
+        </a>
+        
+        
+        </div>
+
+      
+    <div class="mx-auto sm:mx-0 text-center sm:text-left pb-10">
+      <div class="pb-10 pt-2 md:py-6">
+        
+        {
+          sub ? (
+            <>
+              <h1 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-xl sm:text-2xl xl:text-2xl">
+                {title}
+              </h1>
+              <h2 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+                {sub}
+              </h2>
+            </>
+          ) : (
+            <h1 class="mt-4 font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+              {title}
+            </h1>
+          )
+        }
+
+<div class="mt-6">
+  <div class="mx-auto max-w-7xl md:text-lg md:leading-8 text-white">
+    <slot name="heroContent" />
+  </div>
+
+        {
+          href && (
+            <PrimaryButton href={href}>
+              {linkText}
+            </PrimaryButton>
+          )
+        }
+      </div>
+    </div>
+  </Container>
+</div>

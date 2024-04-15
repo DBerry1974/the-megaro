@@ -1,0 +1,70 @@
+---
+import Footer from "../components/Footer/Footer.astro"
+import Header from "../components/Header/LandingHeader.astro";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+function removeTrailingSlash(str: string) {
+  return str.replace(/\/+$/, '');
+}
+
+const {
+  title,
+  description,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={removeTrailingSlash(Astro.url.href)} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="The Gyle Hotel" />
+    <meta property="og:description" content="The Megaro is ideally located in the heart of King's Cross, London. Our hotel is just a stone's throw away from London Kings Cross station, making it the perfect base for exploring the city.">
+    <meta property="og:description" content={description} />
+    <meta property="twitter:title" content="The Megaro Hotel">
+    <meta property="twitter:description" content="The Megaro Hotel. The Megaro is ideally located in the heart of King's Cross, London. Our hotel is just a stone's throw away from London Kings Cross station, making it the perfect base for exploring the city.">
+    <meta name="description" content={description} />
+
+    <title>{title}</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "@id": "{{https://www.themegaro.co.uk/}",
+        "name": "{{The Megaro Hotel}}",
+        "telephone": "{{020 7843 2222}}",
+        "email": "{{hello@themegaro.co.uk/}}",
+        "url": "{{https://www.themegaro.co.uk/}}",
+        "description": "{{The Megaro Hotel in Kings Cross, London}}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{Belgrove St}}",
+          "addressLocality": "{{Kings Cross}}",
+          "addressRegion": "{{London}}",  
+          "postalCode": "{{WC1H 8AB}}"
+        }
+      }
+      </script>
+  </head>
+  <body>
+   <Header />
+    <slot />
+    <Footer />
+    
+  </body>
+</html>
