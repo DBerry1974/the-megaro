@@ -1,0 +1,73 @@
+---
+export const prerender = true;
+import { Image } from 'astro:assets' 
+const town = "{town}"; 
+
+import KingsCrossHotelsTarget from "../../components/LocationData/KingsCrossHotelsTarget"; 
+import KingsCrossHotelsSurrounding from "../../components/LocationData/KingsCrossHotelsSurrounding"; 
+
+
+import Layout from "../../layouts/LandingLayout.astro";
+import Hero from "../../components/Hero/Hero.astro";
+import WideHero from "../../components/Hero/Hero.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
+import DefaulContentBlock from "../../components/Content/DefaultContentBlock.astro";
+import ImageOnRight from "../../components/Content/ImageOnRight.astro"; 
+import ImageOnLeft from "../../components/Content/ImageOnLeft.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import GetaQuote from "../../components/GetaQuote.astro";
+
+import Button from "../../components/Buttons/PrimaryButton.astro";
+import SubTitle from "../../components/Headings/SubTitle.astro";
+import LargeTitle from "../../components/Headings/LargeTitle.astro";
+import UspSection from "../../components/Usp.astro";
+import SmallSubTitle from "../../components/Headings/SmallSubTitle.astro";
+
+
+
+---
+<Layout title={`The Megaro | Kings Cross Hotel | Ideal for visiting London`} description={`The Megaro Hotel. Looking for Hotels in Kings Cross? Conveniently located for St Pancras & Kings Cross stations. Ideal for visiting London`}>
+
+<div class="mx-auto max-w-7xl px-6 lg:mt-10">
+
+
+  
+    <div
+    class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
+    >
+    <div class="flex flex-col mb-10 pb-4">
+       <h1 class="text-2xl lg:text-7xl font-bold text-gray-700">Kings Cross Hotels</h1>
+    
+       <p class="mt-6 lg:text-xl text-gray-600">
+        The Megaro is ideally located in the heart of King's Cross, London. Our hotel is just a stone's throw away from London Kings Cross station, making it the perfect base for exploring the city.         
+    </p>
+
+       <p class="mt-6 lg:text-xl text-gray-600">
+        We offer an unrivaled location just a stone's throw from Kings Cross St Pancras rail station, one of the most accessible stations on the London underground. Perfect if you're travelling into London.    
+        </p>
+       
+        <p class="mt-6 lg:text-xl font-bold  text-gray-600">
+         We are conveniently located for visiting a whole host of areas, landmarks and attractions in London.<br />Take a look at the list of locations and attractions nearby!
+            </p>
+           
+    </div> 
+
+    <div class="flex flex-col overflow-hidden mb-10 pb-4 ">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317716.6065126688!2d-0.431249722975234!3d51.528607004464966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1712615647284!5m2!1sen!2suk" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </div>
+
+</div>
+
+
+		
+
+
+  <KingsCrossHotelsSurrounding />
+
+  <KingsCrossHotelsTarget />
+
+
+</Layout>  
+
